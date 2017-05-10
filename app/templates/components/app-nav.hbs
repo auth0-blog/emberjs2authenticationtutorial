@@ -1,0 +1,24 @@
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      {{#link-to 'index' class="navbar-brand"}} Whistle Blower {{/link-to}}
+    </div>
+
+    <ul class="nav navbar-nav">
+        <li>
+            {{#if loggedIn }}
+                {{#link-to 'meetups' class="navbar-brand"}} Meetups {{/link-to}}
+                {{#link-to 'whistle-blowers' class="navbar-brand"}} Whistle Blowers {{/link-to}}
+            {{/if}}
+        </li>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        {{#if loggedIn }}
+            <button {{ action "logout" }} class="btn btn-danger log">Log out</button>
+        {{else}}
+            <button {{ action "login" }} class="btn btn-info log">Log In</button>
+        {{/if}}
+      </li>
+    </ul>
+</nav>

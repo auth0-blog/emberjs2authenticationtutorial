@@ -1,0 +1,21 @@
+{{app-nav}}
+
+<div class="container">
+    <h3 class="text-center">Whistle Blowing Updates From Across The World</h3>
+</div>
+
+<br/>
+
+{{#each model as |update|}}
+    <div class="col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"> {{ update.title }} </h3>
+        </div>
+        <div class="panel-body">
+          <p><span class="badge alert-danger"> Location: </span><strong> {{ update.location }} </strong></p>
+        </div>
+      </div>
+    </div>
+{{/each}}
+

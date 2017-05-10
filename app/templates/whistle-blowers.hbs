@@ -1,0 +1,30 @@
+{{app-nav}}
+
+<div class="container">
+    <h3 class="text-center">Whistle Blowers Across The World </h3>
+</div>
+
+<br/>
+
+{{#each model as |whistleblower|}}
+    <div class="col-lg-2 col-sm-4">
+        <div class="card hovercard">
+            <div class="cardheader">
+            </div>
+            <div class="avatar">
+                <img alt="" src="{{whistleblower.avatar}}">
+            </div>
+            <div class="info">
+                <div class="title">
+                    <a target="_blank" href="http://scripteden.com/">{{ whistleblower.name }}</a>
+                </div>
+                <div class="desc">
+                    <p><strong>{{whistleblower.level}}</strong></p></div>
+                <div class="desc">
+                    <p><span class="badge alert-danger"> Uncovered Spoils: </span> {{whistleblower.uncoveredSpoils}} </p></div>
+            </div>
+        </div>
+    </div>
+{{/each}}
+
+{{outlet}}
