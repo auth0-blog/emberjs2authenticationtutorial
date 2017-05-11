@@ -18,7 +18,7 @@ export default Ember.Service.extend({
 
     getActivities() {
         const url = `${BASE_URL}/api/activities`;
-        return axios.get(url).then(response => response.data);
+        return axios.get(url);
     },
 
     getAccessToken() {
