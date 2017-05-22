@@ -54,7 +54,7 @@ app.get('/api/activities', (req, res) => {
   res.json(whistleBlowerActivities);
 })
 
-app.get('/api/whistleblowers', (req,res) => {
+app.get('/api/whistleblowers', authCheck, (req,res) => {
   let whistleBlowers = [
   {
     id: 1111,
@@ -95,7 +95,7 @@ app.get('/api/whistleblowers', (req,res) => {
   res.json(whistleBlowers);
 })
 
-app.get('/api/meetups', (req,res) => {
+app.get('/api/meetups', authCheck, (req,res) => {
   let meetups = [
   {
     name: 'WhistleBlower London Meetup',
